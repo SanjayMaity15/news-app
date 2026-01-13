@@ -1,18 +1,16 @@
 import { create } from "zustand";
 import { axiosInstance } from "../axios/axiosInstance";
 
-export const useNewsStore = create((set, get) => ({
+export const useNewsStore = create((set) => ({
 	news: [],
 	loading: false,
+
 	fetchNews: async (category = "india") => {
-		set({
-			loading: true,
-		});
+		set({ loading: true });
+
 		try {
 			const response = await axiosInstance.get(
-				`/everything?q=${category}&apiKey=${
-					import.meta.env.VITE_API_KEY
-				}`
+				`/api/news?category=${category}`
 			);
 
 			if (response.status === 200) {
@@ -22,10 +20,8 @@ export const useNewsStore = create((set, get) => ({
 				});
 			}
 		} catch (error) {
-			console.log(error);
-			set({
-				loading: false,
-			});
+			console.error("News fetch error:", error);
+			set({ loading: false });
 		}
 	},
 }));

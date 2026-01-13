@@ -9,10 +9,10 @@ const Footer = () => {
 					{/* Brand */}
 					<div>
 						<h2 className="text-2xl font-bold text-blue-600">
-							SM<span className="text-gray-800">News</span>
+							MTY<span className="text-gray-800">News</span>
 						</h2>
 						<p className="mt-3 text-sm text-gray-600 leading-relaxed">
-							SMNews is a modern news platform delivering the
+							MTYNews is a modern news platform delivering the
 							latest headlines across business, technology,
 							sports, health, and more — all in one place.
 						</p>
@@ -35,10 +35,10 @@ const Footer = () => {
 					{/* About */}
 					<div>
 						<h3 className="text-lg font-semibold text-gray-800 mb-3">
-							About SMNews
+							About MTYNews
 						</h3>
 						<p className="text-sm text-gray-600 leading-relaxed">
-							Built using modern web technologies, SMNews focuses
+							Built using modern web technologies, MTYNews focuses
 							on clean UI, fast performance, and real-time news
 							updates from trusted sources.
 						</p>
@@ -48,7 +48,7 @@ const Footer = () => {
 				{/* Bottom Section */}
 				<div className="mt-10 border-t border-gray-200 pt-4 flex flex-col sm:flex-row justify-between items-center gap-3">
 					<p className="text-sm text-gray-500">
-						© {new Date().getFullYear()} SMNews. All rights
+						© {new Date().getFullYear()} MTYNews. All rights
 						reserved.
 					</p>
 
